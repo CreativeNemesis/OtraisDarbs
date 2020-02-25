@@ -1,0 +1,39 @@
+﻿@model Lietotaji
+
+@{
+    Layout = "_Layout";
+    var title = "Izveidot lietotāju";
+    ViewData["Title"] = title;
+}
+
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+</style>
+
+<h2>@title</h2><div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<form class="m-1 p-1" method="post">
+    <div class="form-group">
+        <label asp-for="Vards"></label>
+        <input asp-for="Vards" class="form-control" />
+        <span asp-validation-for="Vards" class="text-danger"></span>
+    </div>    <div class="form-group">
+        <label asp-for="Uzvards"></label>
+        <input asp-for="Uzvards" type="text" class="form-control" />
+        <span asp-validation-for="Uzvards" class="text-danger"></span>
+    </div>    <div class="form-group">
+        <label asp-for="Adrese"></label>
+        <input asp-for="Adrese" type="text" class="form-control" />
+        <span asp-validation-for="Adrese" class="text-danger"></span>
+    </div>    <div class="form-group">
+        <label asp-for="Telefons"></label>
+        <input asp-for="Telefons" type="text" class="form-control" />
+        <span asp-validation-for="Telefons" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
